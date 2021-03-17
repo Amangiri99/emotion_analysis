@@ -1,0 +1,7 @@
+punkt
+wordnet
+snowball
+stem
+snowball_data
+stopwords
+snowball_test

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Emotion Analysis</title>
+		<link rel="stylesheet" type="text/css" href="../static/style.css">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+	</head>
+
+	<body>
+
+		<!-- Website Title -->
+		<div class="container">
+			<h2 class='container-heading'><span>Emotion Analysis</span> for Short Essays/Messages</h2>
+	        	<div class='description'>
+				<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+			</div>
+		</div>
+
+		<!-- Result ['anger' 'fear' 'joy' 'love' 'sadness' 'surprise']-->
+		<div class="results">
+			{% if prediction==0 %}
+				<h1>Prediction: <span class='text'>Seems like you are a bit angry.</span></h1>
+			{% elif prediction==1 %}
+				<h1>Prediction: <span class='text'>There is nothing to fear about my friend.</span></h1>
+			{% elif prediction==2 %}
+				<h1>Prediction: <span class='text'>Seems like you are in a happy mood. Enjoy!.</span></h1>
+			{% elif prediction==3 %}
+				<h1>Prediction: <span class='text'>Your message tells me you are in Love..</span></h1>
+			{% elif prediction==4 %}
+				<h1>Prediction: <span class='text'>Don't be sad.</span></h1>
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='text'>SURPRISE!</span></h1>
+			{% endif %}
+		</div>
+
+		<!-- Footer -->
+        <div class='footer'>
+            <div class="contact">
+                <a target="_blank" href="https://github.com/Amangiri99"><i class="fab fa-github fa-lg contact-icon"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/aman-giri-b06a40169/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+            </div>
+            <p class='footer-description'>Made with ❤️ by Aman Giri.</p>
+        </div>
+
+	</body>
+</html>
